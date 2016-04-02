@@ -96,5 +96,21 @@ public class NumberDisplayTest {
     }
 
 
+    @Test
+    public void shouldTickOneSecondAndWrapAround() throws Exception{
+        NumberDisplay display = new NumberDisplay(0,12);
+        display.setValue(0);
+
+        for (int i=0; i<=24; i++){
+            System.out.println(display.getValue());
+            if(display.getValue() != i %12){
+                throw new IllegalStateException("Returns wrong String");
+            }
+            display.increment();
+        }
+
+    }
+
+
 
 }
