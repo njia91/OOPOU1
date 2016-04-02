@@ -105,7 +105,6 @@ public class NumberDisplayTest {
             if(display.getValue() != i %12){
                 throw new IllegalStateException("Returns wrong String");
             }
-
             display.increment();
         }
 
