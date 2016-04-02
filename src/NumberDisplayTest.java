@@ -102,10 +102,10 @@ public class NumberDisplayTest {
         display.setValue(0);
 
         for (int i=0; i<=24; i++){
-            System.out.println(display.getValue());
             if(display.getValue() != i %12){
                 throw new IllegalStateException("Returns wrong String");
             }
+
             display.increment();
         }
 
