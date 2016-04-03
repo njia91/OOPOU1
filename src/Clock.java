@@ -35,7 +35,7 @@ public class Clock {
     }
 
     /**
-     * timeTick calls method increment that increases minute with one.
+     * timeTick calls method increment that increases minute counter.
      * If minute did a wrap around increase hour with one..
      */
     public void timeTick(){

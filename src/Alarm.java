@@ -43,11 +43,12 @@ public class Alarm extends Clock {
      *
      * If the time is the same as alarm time the class will print out ALARM.
      */
+    @Override
     public void timeTick(){
 
         super.timeTick();
 
-        if (checkAlarm()) {
+        if (checkAlarm() && this.alarmSet) {
             System.out.println("ALARM!");
         }
     }

@@ -88,7 +88,7 @@ public class NumberDisplay {
      * Returns true if last call of increment changes the
      * value of currentDigit to minLimit.
      * In other words, did a wrap around.
-     * @return true if currentDigit did a wrap around.
+     * @return true if currentDigit is == minLimit.
      *
      */
     public boolean didWrapAround(){

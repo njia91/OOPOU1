@@ -101,7 +101,7 @@ public class NumberDisplayTest {
         NumberDisplay display = new NumberDisplay(0,12);
         display.setValue(0);
 
-        for (int i=0; i<=24; i++){
+        for (int i=0; i<=100; i++){
             if(display.getValue() != i %12){
                 throw new IllegalStateException("Returns wrong String");
             }
@@ -109,6 +109,21 @@ public class NumberDisplayTest {
         }
 
     }
+
+    @Test
+    public void shouldNotWrapAround() throws Exception{
+        NumberDisplay display = new NumberDisplay(0,100);
+        display.setValue(1);
+
+        for (int i=0; i<=80; i++){
+            if(display.didWrapAround()){
+                throw new IllegalStateException("Returns wrong String");
+            }
+            display.increment();
+        }
+
+    }
+
 
 
 
