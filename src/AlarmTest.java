@@ -24,7 +24,7 @@ public class AlarmTest {
         System.out.println("Should print \"ALARM!\"");
         Alarm aClock = new Alarm();
 
-        aClock.setAlarm(true);
+        aClock.turnOnAlarm();
 
         aClock.setTime(10,10);
         aClock.setAlarmTime(10,11);

@@ -5,17 +5,23 @@ public class Alarm extends Clock {
 
 
     private boolean alarmSet = false;
-    private String displayAlarm;
+    private Clock alarmTime = new Clock();
+
 
 
     /**
-     * Allows the user to set the alarm on or of.
-     * True if the alarm should be turned on, False for off.
-     * @param alarmSet True for on, false for off.
+     * Allows the user to turn alarm on.
      */
-    public void setAlarm(boolean alarmSet){
+    public void turnOnAlarm(){
 
-        this.alarmSet = alarmSet;
+        this.alarmSet = true;
+    }
+
+    /**
+     * Allows the user to turn alarm off.
+     */
+    public void turnOffAlarm(){
+        this.alarmSet = false;
     }
 
     /**
@@ -25,14 +31,8 @@ public class Alarm extends Clock {
      * @param minute integer for minute
      */
     public void setAlarmTime(int hour, int minute){
-        NumberDisplay alarmHour = new NumberDisplay(0,24);
-        NumberDisplay alarmMinute = new NumberDisplay(0,60);
 
-        alarmHour.setValue(hour);
-        alarmMinute.setValue(minute);
-
-        this.displayAlarm = (alarmHour.getDisplayValue() +
-                ":" + alarmMinute.getDisplayValue());
+        alarmTime.setTime(hour, minute);
 
 
     }
@@ -59,8 +59,9 @@ public class Alarm extends Clock {
      */
     private boolean checkAlarm(){
 
-        return (displayAlarm).equals(getTime());
+        return (alarmTime.getTime()).equals(getTime());
     }
+
 
 
 
