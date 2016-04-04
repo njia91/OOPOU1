@@ -8,7 +8,7 @@ public class OU1 {
         Alarm alarm = new Alarm();
 
 
-        alarm.turnOnAlarm();
+        alarm.setAlarm(true);
 
         alarm.setTime(13,50);
         alarm.setAlarmTime(14,00);

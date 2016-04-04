@@ -10,19 +10,14 @@ public class Alarm extends Clock {
 
 
     /**
-     * Allows the user to turn alarm on.
+     * Allows the user to turn on or off alarm
+     * @param alarmSet True for on, false for off
      */
-    public void turnOnAlarm(){
+    public void setAlarm (boolean alarmSet){
 
-        this.alarmSet = true;
+        this.alarmSet = alarmSet;
     }
 
-    /**
-     * Allows the user to turn alarm off.
-     */
-    public void turnOffAlarm(){
-        this.alarmSet = false;
-    }
 
     /**
      * This method sets the alarm time for the clock
@@ -35,6 +30,14 @@ public class Alarm extends Clock {
         alarmTime.setTime(hour, minute);
 
 
+    }
+
+    /**
+     * Allows the user to check the alarm time
+     * @return String of the alarm time.
+     */
+    public String getAlarmTime(){
+        return alarmTime.getTime();
     }
 
     /**
