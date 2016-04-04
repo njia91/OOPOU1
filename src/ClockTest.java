@@ -1,7 +1,7 @@
 import org.junit.Test;
 
 /**
- * Created by dv15man on 2016-04-03.
+ * Created by dv15man on
  * Test suite for Clock.class
  */
 public class ClockTest {
