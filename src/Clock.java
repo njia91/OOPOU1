@@ -8,7 +8,7 @@ public class Clock {
 
     private NumberDisplay hour = new NumberDisplay(0,24);
     private NumberDisplay minute = new NumberDisplay(0,60);
-    private String displayString;
+    private String displayString = "00:00";
 
 
     /**

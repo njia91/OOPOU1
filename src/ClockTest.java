@@ -6,11 +6,20 @@ import org.junit.Test;
  */
 public class ClockTest {
 
+    /**
+     * Test that a Clock can be created.
+     * @throws Exception
+     */
     @Test
     public void shouldCreateClock() throws Exception {
         new Clock();
     }
 
+    /**
+     * Test that the user can create a clock and set the time.
+     * Testing getTime() function.
+     * @throws Exception
+     */
     @Test
     public void shouldCreateClockAndSetTime() throws Exception {
         Clock c = new Clock(0,24);
@@ -20,6 +29,11 @@ public class ClockTest {
         }
     }
 
+    /**
+     * Test that the user can set the time with setTime() and
+     * that getTime() returns the correct time.
+     * @throws Exception
+     */
     @Test
     public void shouldSetTime() throws Exception {
         Clock c = new Clock();
@@ -30,6 +44,11 @@ public class ClockTest {
         }
     }
 
+    /**
+     * Test that the Clock can tick correctly and that the hour
+     * digit wraps around.
+     * @throws Exception
+     */
     @Test
     public void shouldTickAndGetCorrectTime() throws Exception {
         Clock c = new Clock();
