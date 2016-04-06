@@ -3,7 +3,7 @@ import java.security.InvalidParameterException;
 /**
  * Created by dv15man on 2016-03-29.
  *
- * Class for simulation a display.
+ * Class for simulation a Number display.
  */
 public class NumberDisplay {
 

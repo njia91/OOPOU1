@@ -1,5 +1,9 @@
 /**
- * Created by dv15man on 2016-03-30.
+ * Created by dv15man.
+ *
+ * Alarm inherits form class Clock.
+ * This class is used to simulate an alarm clock.
+ * Allows the user to turn on/off alarm and set an alarm time.
  */
 public class Alarm extends Clock {
 
@@ -8,6 +12,25 @@ public class Alarm extends Clock {
     private Clock alarmTime = new Clock();
 
 
+    /**
+     * Constructor for creating a clock
+     * Setting hour and minute to zero
+     */
+    public Alarm(){
+
+     super();
+    }
+
+    /**
+     * Constructor allows user to select time for hour and minute
+     * @param hour integer for hour
+     * @param minute integer for minute
+     */
+    public Alarm(int hour, int minute){
+
+        super(hour,minute);
+
+    }
 
     /**
      * Allows the user to turn on or off alarm

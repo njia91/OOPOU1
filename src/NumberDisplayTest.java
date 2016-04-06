@@ -5,7 +5,7 @@ import static junit.framework.TestCase.assertEquals;
 /**
  * Created by dv15man
  *
- * This test suite tests the class NumberDisplay
+ * This test suite tests for NumberDisplay.class
  */
 public class NumberDisplayTest {
 

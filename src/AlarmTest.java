@@ -34,9 +34,8 @@ public class AlarmTest {
      */
     @Test
     public void alarmTimeShouldNotBeCorrect() throws Exception{
-        Alarm aClock = new Alarm();
+        Alarm aClock = new Alarm(10,10);
 
-        aClock.setTime(10,10);
 
         aClock.setAlarmTime(10,9);
 
