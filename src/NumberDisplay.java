@@ -17,13 +17,16 @@ public class NumberDisplay {
      * Constructs a NumberDisplay and sets the
      * min and max value for the display
      * @param  minLimit -  Minimum value
-     * @param maxLimit - Maximum value*/
+     * @param maxLimit - Maximum value
+     * @throws IllegalArgumentException if invalid argument
+     * */
     public NumberDisplay(int minLimit, int maxLimit){
 
         if (minLimit < maxLimit) {
             this.minLimit = minLimit;
             this.maxLimit = maxLimit;
         }
+        //If parameter value is not within the limit.
         else {
             throw new IllegalArgumentException("minLimit is larget than maxLimit");
         }
@@ -45,8 +48,9 @@ public class NumberDisplay {
      * Controls that the value is within limits.
      *
      * @param newValue new value for the display
+     * @throws InvalidParameterException if invalid parameters.
      */
-    public  void setValue(int newValue){
+    public  void setValue(int newValue) throws InvalidParameterException{
 
         if (newValue>=minLimit && newValue<=maxLimit){
             currentDigit = newValue;
@@ -64,8 +68,8 @@ public class NumberDisplay {
     public String getDisplayValue(){
 
         int nrOfDigits = (int)(Math.log10(maxLimit)+1);
-
         String formatted = String.valueOf(currentDigit);
+        //Padd the string with zeroes.
        while(formatted.length()< nrOfDigits){
            formatted = ("0" + formatted);
        }

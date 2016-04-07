@@ -1,3 +1,5 @@
+import java.security.InvalidParameterException;
+
 /**
  * Created by dv15man on 2016-03-29.
  *
@@ -16,22 +18,19 @@ public class Clock {
      * Setting hour and minute to zero
      */
     public Clock(){
-
-        this.hour.setValue(0);
-        this.minute.setValue(0);
-        }
+            this.hour.setValue(0);
+            this.minute.setValue(0);
+    }
 
     /**
      * Constructer allows user to select time for hour and minute
      * @param hour integer for hour
      * @param minute integer for minute
      */
-    public Clock(int hour, int minute){
+    public Clock(int hour, int minute) {
 
-        this.hour.setValue(hour);
-        this.minute.setValue(minute);
-
-
+            this.hour.setValue(hour);
+            this.minute.setValue(minute);
     }
 
     /**
@@ -68,10 +67,10 @@ public class Clock {
     }
 
     /**
-     * Internal method that updates the displayString.
+     * Internal method that update  displayString.
      */
     private void updateDisplay(){
-
+        //Merges the string from hour and minute together.
         this.displayString = (hour.getDisplayValue() +
                 ":" + minute.getDisplayValue());
     }

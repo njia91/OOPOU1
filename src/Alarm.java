@@ -17,7 +17,6 @@ public class Alarm extends Clock {
      * Setting hour and minute to zero
      */
     public Alarm(){
-
      super();
     }
 
@@ -26,9 +25,8 @@ public class Alarm extends Clock {
      * @param hour integer for hour
      * @param minute integer for minute
      */
-    public Alarm(int hour, int minute){
-
-        super(hour,minute);
+    public Alarm(int hour, int minute) {
+            super(hour, minute);
 
     }
 
