@@ -8,8 +8,8 @@
 public class Alarm extends Clock {
 
 
-    private boolean alarmSet = false;
-    private Clock alarmTime = new Clock();
+    private boolean alarmSet;
+    private Clock alarmTime;
 
 
     /**
@@ -17,7 +17,10 @@ public class Alarm extends Clock {
      * Setting hour and minute to zero
      */
     public Alarm(){
-     super();
+
+        super();
+        alarmTime = new Clock();
+        alarmSet = false;
     }
 
     /**

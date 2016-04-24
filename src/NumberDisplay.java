@@ -20,7 +20,8 @@ public class NumberDisplay {
      * @param maxLimit - Maximum value
      * @throws IllegalArgumentException if invalid argument
      * */
-    public NumberDisplay(int minLimit, int maxLimit){
+    public NumberDisplay(int minLimit, int maxLimit)
+            throws IllegalArgumentException{
 
         if (minLimit < maxLimit) {
             this.minLimit = minLimit;
@@ -28,7 +29,8 @@ public class NumberDisplay {
         }
         //If parameter value is not within the limit.
         else {
-            throw new IllegalArgumentException("minLimit is larget than maxLimit");
+            throw new IllegalArgumentException("minLimit is l" +
+                    "arger than maxLimit");
         }
 
     }

@@ -8,9 +8,9 @@ import java.security.InvalidParameterException;
 public class Clock {
 
 
-    private NumberDisplay hour = new NumberDisplay(0,24);
-    private NumberDisplay minute = new NumberDisplay(0,60);
-    private String displayString = "00:00";
+    private NumberDisplay hour;
+    private NumberDisplay minute;
+    private String displayString;
 
 
     /**
@@ -18,16 +18,20 @@ public class Clock {
      * Setting hour and minute to zero
      */
     public Clock(){
-            this.hour.setValue(0);
-            this.minute.setValue(0);
+        hour = new NumberDisplay(0,24);
+        minute = new NumberDisplay(0,60);
+        this.hour.setValue(0);
+        this.minute.setValue(0);
     }
 
     /**
      * Constructer allows user to select time for hour and minute
      * @param hour integer for hour
      * @param minute integer for minute
+     * @throws IllegalArgumentException if invalid time is set.
+     *
      */
-    public Clock(int hour, int minute) {
+    public Clock(int hour, int minute) throws IllegalArgumentException{
 
             this.hour.setValue(hour);
             this.minute.setValue(minute);
@@ -49,8 +53,9 @@ public class Clock {
      * Allows user to select time
      * @param hour integer value
      * @param minute integer value
+     * @throws IllegalArgumentException if invalid time is set.
      */
-    public void setTime(int hour, int minute){
+    public void setTime(int hour, int minute) throws IllegalArgumentException{
 
         this.hour.setValue(hour);
         this.minute.setValue(minute);
