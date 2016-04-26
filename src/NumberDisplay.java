@@ -29,8 +29,8 @@ public class NumberDisplay {
         }
         //If parameter value is not within the limit.
         else {
-            throw new IllegalArgumentException("minLimit is l" +
-                    "arger than maxLimit");
+            throw new IllegalArgumentException("minLimit is " +
+                    "larger than maxLimit");
         }
 
     }
